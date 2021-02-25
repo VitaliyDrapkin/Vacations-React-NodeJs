@@ -1,0 +1,47 @@
+.vacations {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.space {
+  flex-grow: 1;
+  flex-basis: 350px;
+  max-width: 450px;
+  margin: 0 20px;
+}
+
+.addVacationDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.addVacationDiv button,
+.addVacationDiv a {
+  background-color: blue;
+  color: whitesmoke;
+  font-weight: bold;
+  width: 210px;
+  height: 50px;
+  font-size: 23px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+}
+.addVacationDiv a {
+  padding-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  height: 40px;
+}
+.adminButtons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

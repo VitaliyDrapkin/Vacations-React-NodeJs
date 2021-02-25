@@ -1,0 +1,199 @@
+.vacationItem {
+  flex-grow: initial;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 350px;
+  max-width: 450px;
+  height: 350px;
+  background-color: rgb(45, 21, 179);
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 20px 20px;
+  position: relative;
+}
+
+.item {
+  width: 90%;
+  height: 90%;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+
+.descriptionPrice {
+  overflow: hidden;
+  width: 70%;
+  flex-wrap: wrap;
+  color: whitesmoke;
+  margin-bottom: 5px;
+}
+
+.description,
+.price {
+  background-color: rgb(45, 21, 179);
+  padding-right: 10px;
+  width: 120%;
+}
+
+.description {
+  white-space: pre-line;
+  max-height: 70%;
+}
+.description {
+  width: 100%;
+  height: 50%;
+  font-size: 16px;
+}
+.price {
+  margin-top: 7px;
+  padding-bottom: 5px;
+  font-size: 21px;
+  font-weight: bold;
+}
+.followBTN {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 35px;
+  right: 10px;
+}
+.followBTN,
+.adminButtons {
+  position: absolute;
+  width: 15%;
+}
+
+.adminButtons {
+  top: -10px;
+  right: 0;
+}
+.xIcon {
+  cursor: pointer;
+  margin-left: 40px;
+  margin-top: -4px;
+  padding-top: 3px;
+  width: 28px;
+  padding-left: 6px;
+  border: 2px solid transparent;
+}
+
+.vacationId {
+  margin-left: 10px;
+  width: 150%;
+  color: white;
+  font-weight: bold;
+  margin-top: 5px;
+  padding-left: 6px;
+  border: 2px solid transparent;
+}
+
+.xIcon:hover,
+.editIcon:hover {
+  border-radius: 5px;
+  border: 2px solid whitesmoke;
+}
+
+.xIcon img {
+  width: 20px;
+}
+.editIcon {
+  cursor: pointer;
+
+  margin-left: 40px;
+  padding-top: 3px;
+  border: 2px solid transparent;
+  width: 28px;
+  padding-left: 5px;
+  margin-top: -15px;
+}
+.editIcon img {
+  width: 25px;
+}
+.picture {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: fit-content;
+  height: fit-content;
+  max-width: 280px;
+  max-height: 180px;
+  overflow: hidden;
+}
+
+.picture img {
+  max-width: 300px;
+  max-height: 180px;
+}
+
+.date {
+  height: 30px;
+  margin-top: 15px;
+}
+
+.unfollow,
+.follow {
+  margin-left: 30px;
+
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.unfollow:focus,
+.follow:focus {
+  outline: none;
+}
+.unfollow {
+  background-color: orangered;
+  color: whitesmoke;
+}
+.follow {
+  background-color: greenyellow;
+  color: black;
+}
+
+.date span {
+  color: whitesmoke;
+  font-size: 20px;
+}
+.followsCount {
+  right: 15px;
+}
+.followsCountAdmin {
+  right: 35px;
+}
+.followsCount,
+.followsCountAdmin {
+  display: flex;
+  position: absolute;
+  top: 37px;
+  color: white;
+  font-size: 21px;
+}
+
+.followsCount img,
+.followsCountAdmin img {
+  margin-left: 5px;
+  margin-top: 3px;
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: 700px) {
+  .picture {
+    max-width: 90%;
+    max-height: 200px;
+  }
+  .date span {
+    font-size: 16px;
+  }
+}

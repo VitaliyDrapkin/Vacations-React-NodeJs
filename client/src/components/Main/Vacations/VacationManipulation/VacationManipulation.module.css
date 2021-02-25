@@ -1,0 +1,141 @@
+.vacationManipulation {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.623);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalWindow {
+  background-color: skyblue;
+  border-radius: 20px;
+  flex-basis: 50%;
+}
+
+.header {
+  margin-top: 10px;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+.body {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.form {
+  margin-left: 15px;
+  width: 40%;
+}
+.inputField {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+}
+
+.inputField input {
+  padding-left: 3%;
+  font-size: 19px;
+  height: 40px;
+  width: 100%;
+}
+
+.inputFieldDate {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.dateDiv {
+  margin-left: 10px;
+  width: 85%;
+}
+.inputFieldDate input {
+  padding-left: 5%;
+
+  font-size: 19px;
+  height: 40px;
+  width: 100%;
+}
+.dateText {
+  font-size: 21px;
+  width: 30%;
+}
+
+.buttons {
+  width: 105%;
+  margin-top: 40px;
+  height: 50px;
+  display: flex;
+}
+
+.imgBTN {
+  position: relative;
+  cursor: pointer;
+  width: 15%;
+  padding-left: 10px;
+  border: 2px solid transparent;
+}
+.imgBTN:hover {
+  border: 2px solid black;
+}
+.imgBTN img {
+  cursor: pointer;
+
+  width: 80%;
+}
+input[type="file"]::-webkit-file-upload-button {
+  cursor: pointer;
+}
+.imgInputFile {
+  opacity: 0;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.simpleBTN {
+  margin-left: 2%;
+  width: 40%;
+}
+
+.simpleBTN button {
+  border-radius: 10px;
+  font-size: 21px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  color: white;
+  cursor: pointer;
+}
+
+.closeBTN {
+  background-color: grey;
+}
+.closeBTN:hover {
+  background-color: red;
+  color: black;
+}
+
+.saveBTN {
+  background-color: green;
+}
+
+.saveBTN:hover {
+  background-color: greenyellow;
+  color: black;
+}
+

@@ -1,0 +1,72 @@
+.header {
+  width: 95%;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
+}
+
+.header h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 55px;
+  color: whitesmoke;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.login {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  bottom: 40px;
+}
+
+.loginName {
+  margin-top: 25px;
+  margin-right: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.login button {
+  background-color: orangered;
+  cursor: pointer;
+  color: white;
+  margin-top: 25px;
+  font-size: 16px;
+  border-radius: 10px;
+  height: 35px;
+  width: 100px;
+}
+
+.login button:hover {
+  border: 2px solid white;
+  font-weight: bold;
+}
+
+.adminIcon {
+  margin-top: 15px;
+  margin-right: 20px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(3, 3, 139);
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.adminIcon img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    width: 95%;
+    height: 180px;
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+  }
+}

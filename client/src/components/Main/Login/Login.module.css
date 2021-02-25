@@ -1,0 +1,25 @@
+.login {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.loginField {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 40%;
+  border-radius: 20px;
+  background-color: rgba(0, 81, 255, 0.74);
+}
+
+.loginHeader {
+  width: 80%;
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

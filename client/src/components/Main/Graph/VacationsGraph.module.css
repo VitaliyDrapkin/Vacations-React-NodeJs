@@ -1,0 +1,54 @@
+.vacationsGraph {
+  width: 100%;
+}
+.navlinkBtn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 45px;
+}
+
+.navlinkBtn a {
+  background-color: blue;
+  color: whitesmoke;
+  font-weight: bold;
+  width: 210px;
+  height: 50px;
+  font-size: 23px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  padding-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  height: 40px;
+}
+
+.graph {
+  margin-top: 60px;
+  background-color: #fff;
+}
+
+.permission {
+  font-size: 25px;
+  margin-top: 30px;
+  color: whitesmoke;
+  font-weight: bold;
+  background-color: blue;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.canvasContainer {
+  width: 70vw;
+  height: 60vh;
+}
+
+@media screen and (max-width: 700px) {
+  .canvasContainer {
+    width: 70vw;
+    height: 45vh;
+  }
+}
