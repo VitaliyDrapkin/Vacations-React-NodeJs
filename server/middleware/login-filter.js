@@ -19,7 +19,6 @@ function authenticateJwtRequestToken() {
       "/photo/",
       "/user/login",
       "/user/registration",
-      /^\/photo\/.*/,
     ],
   });
 }

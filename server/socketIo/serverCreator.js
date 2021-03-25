@@ -39,9 +39,9 @@ function socketServerCreator(serverHttp) {
     socket.on("editVacation", async (vacation) => {
       //delete vacations from DB
       const token = socket.handshake.query.token;
-      const newVacation = await vacationLogic.updateVacation(vacation, token);
+      await vacationLogic.updateVacation(vacation, token);
       // Server send event delete vacation to all clients
-      io.emit("editVacation", newVacation);
+      io.emit("editVacation", vacation);
       console.log("Admin edit vacation:" + vacation.id);
     });
 

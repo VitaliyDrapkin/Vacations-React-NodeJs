@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: vacationproject
+-- Host: 127.0.0.1    Database: vacations
 -- ------------------------------------------------------
 -- Server version	8.0.21
 
@@ -29,7 +29,7 @@ CREATE TABLE `followed_vacations` (
   KEY `vacation_idx` (`vacation`),
   CONSTRAINT `user` FOREIGN KEY (`user`) REFERENCES `users` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `vacations` FOREIGN KEY (`vacation`) REFERENCES `vacations` (`vacationId`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `followed_vacations` (
 
 LOCK TABLES `followed_vacations` WRITE;
 /*!40000 ALTER TABLE `followed_vacations` DISABLE KEYS */;
-INSERT INTO `followed_vacations` VALUES (72,457),(112,457),(113,457),(112,460),(72,461),(112,462);
+INSERT INTO `followed_vacations` VALUES (72,457),(112,457),(113,457),(72,458),(72,459),(112,460),(72,461),(112,462);
 /*!40000 ALTER TABLE `followed_vacations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,13 +51,13 @@ DROP TABLE IF EXISTS `users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `userId` int NOT NULL AUTO_INCREMENT,
-  `userName` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `firstName` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `lastName` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `password` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `userType` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `userName` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `firstName` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lastName` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `userType` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=121 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,7 +66,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','admin','admin','d4da045cf27a050e0ce092f99341c8c8','admin'),(72,'vetal','Vitaliy','Drapkin','cd78e1ed964e591a082935250f9490ce','user'),(112,'vetalT','vitaliy','vitaliy','cd78e1ed964e591a082935250f9490ce','user'),(113,'vetal2','vitaliy','drapkin','cd78e1ed964e591a082935250f9490ce','user'),(114,'wefwef','wefwef','fweefwe','64bfd2bb8326dcc17995268e2cb01291','user'),(115,'vetal123','dfsf','ewfwef','5c579e9faafd2b05f9a5bce39df92a3f','user'),(116,'wefwef','qwefwef','fwefwef','64bfd2bb8326dcc17995268e2cb01291','user'),(117,'wefwefe','qwefwef','fwefwef','64bfd2bb8326dcc17995268e2cb01291','user');
+INSERT INTO `users` VALUES (1,'admin','admin','admin','383ec6de181d5de9954939b614097d4a','admin'),(72,'vetal','Vitaliy','Drapkin','cd78e1ed964e591a082935250f9490ce','user'),(112,'vetalT','vitaliy','vitaliy','cd78e1ed964e591a082935250f9490ce','user'),(113,'vetal2','vitaliy','drapkin','cd78e1ed964e591a082935250f9490ce','user'),(114,'wefwef','wefwef','fweefwe','64bfd2bb8326dcc17995268e2cb01291','user'),(115,'vetal123','dfsf','ewfwef','5c579e9faafd2b05f9a5bce39df92a3f','user'),(116,'wefwef','qwefwef','fwefwef','64bfd2bb8326dcc17995268e2cb01291','user'),(117,'wefwefe','qwefwef','fwefwef','64bfd2bb8326dcc17995268e2cb01291','user'),(118,'test','test','test','383ec6de181d5de9954939b614097d4a','user'),(119,'asdkb','dasl','asdkl','bb8cebc1797f0f57bdc34886431dd6b1','user'),(120,'asdasd','asdasd','asdasd','4725d9311f7988bb4277ea6c93f1a575','user');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,13 +79,13 @@ DROP TABLE IF EXISTS `vacations`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `vacations` (
   `vacationId` int NOT NULL AUTO_INCREMENT,
-  `description` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `description` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `price` int DEFAULT NULL,
-  `imgUrl` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `startDate` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `endDate` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `imgUrl` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `startDate` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `endDate` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`vacationId`)
-) ENGINE=InnoDB AUTO_INCREMENT=479 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=480 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -107,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-28 22:28:00
+-- Dump completed on 2021-03-25 12:57:50

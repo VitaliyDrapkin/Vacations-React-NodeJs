@@ -17,12 +17,18 @@ const loginFilter = require("./middleware/login-filter");
 const scanUnauthorizedError = require("./middleware/scanUnauthorizedError");
 const errorHandler = require("./errors/error-handler");
 
+const keys = require("./keys");
+
 expressServer.use(express.json());
 expressServer.use(express.urlencoded({ extended: false }));
 expressServer.use(cookieParser());
 
+expressServer.get("/", async (request, response, next) => {
+  response.send("<h1>Server working</h1>");
+});
+
 const PORT = process.env.PORT || 3001;
-expressServer.use(cors({ origin: "http://localhost:3000", credentials: true }));
+expressServer.use(cors({ origin: keys.CLIENT_URL, credentials: true }));
 
 expressServer.use(loginFilter());
 expressServer.use(scanUnauthorizedError);
@@ -33,10 +39,6 @@ expressServer.use("/photo", photoControl);
 expressServer.use("/follow", followControl);
 expressServer.use("/user", userControl);
 expressServer.use("/vacation", vacationControl);
-
-expressServer.get("/", (req, res) => {
-  res.end("<h1>Hello</h1>");
-});
 
 expressServer.use(errorHandler);
 

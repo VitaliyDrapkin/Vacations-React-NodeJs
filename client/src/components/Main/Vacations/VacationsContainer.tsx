@@ -7,7 +7,6 @@ import { vacationPageAction } from "../../../redux/action";
 import { vacationActionType } from "../../../redux/action-type";
 import { AppStateReduxType } from "../../../redux/store";
 import { toast } from "react-toastify";
-import { addSocketEvents } from "../../../socketIo/main";
 
 //------types------------
 
@@ -20,7 +19,6 @@ interface mapStateToPropsType {
 
 interface mapDispatchToPropsType {
   getVacationsData(): void;
-  openSocketIo(): void;
   onClickShowModalAddVacation(): void;
 }
 
@@ -49,9 +47,6 @@ const mapDispatchToProps = (
       } catch (error) {
         toast.error("Connection error please try letter");
       }
-    },
-    openSocketIo: async () => {
-      addSocketEvents();
     },
 
     onClickShowModalAddVacation: (): void => {

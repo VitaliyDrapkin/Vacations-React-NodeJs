@@ -1,14 +1,13 @@
-const ServerError = require("./../errors/server-error");
-const ErrorType = require("./../errors/error-type");
 const mysql = require("mysql2");
+const keys = require("../keys");
 
 // Connection to sql DB
 const connection = mysql.createConnection({
   multipleStatements: true,
-  host: "localhost", // Computer
-  user: "root", // Username
-  password: "1234", // Password
-  database: "vacationProject", // Database name
+  host: keys.HOST,
+  user: keys.USER,
+  password: keys.PASSWORD,
+  database: keys.DATABASE,
 });
 
 // Connect to the database:

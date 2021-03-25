@@ -10,7 +10,6 @@ interface VacationProps {
   isAdmin: boolean;
   isModalOpen: boolean;
   onClickShowModalAddVacation(): void;
-  openSocketIo(): void;
   getVacationsData(): void;
 }
 
@@ -20,9 +19,7 @@ export class Vacations extends Component<VacationProps> {
     if (this.props.isVacationsLoaded) {
       return;
     }
-
     this.props.getVacationsData();
-    this.props.openSocketIo();
   }
 
   render() {

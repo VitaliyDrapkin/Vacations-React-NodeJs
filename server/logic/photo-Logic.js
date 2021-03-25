@@ -1,7 +1,8 @@
 const multer = require("multer");
 const fs = require("fs");
+const keys = require("../keys");
 
-const DOMAIN = "http://localhost:3001/";
+const DOMAIN = keys.SERVER_URL + "/";
 
 const storage = multer.diskStorage({
   destination(req, file, cb) {

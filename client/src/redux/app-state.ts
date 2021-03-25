@@ -1,7 +1,23 @@
-import { pizza } from './../Model/pizza';
-import { Coupon } from "../models/Coupon";
+import { Vacation } from "./../Model/Vacation";
 
 export class AppState {
-  public coupons: pizza[] = [];
-  public isLoggedIn: boolean = false;
+  vacations: Vacation[];
+  isModalOpen: boolean;
+  isEditMode: boolean;
+  editVacation: null | Vacation;
+  isVacationsLoaded: boolean;
+  lastVacationID: number;
+}
+
+export class authAppState {
+  login: string;
+  isAuth: boolean;
+  isAdmin: boolean;
+  isInitialized: boolean;
+}
+
+export class ImageManipulationState {
+  imgFile: File;
+  isNewImage: boolean;
+  imgUrl: string;
 }

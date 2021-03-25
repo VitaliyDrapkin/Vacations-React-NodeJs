@@ -24,12 +24,6 @@ const ErrorType = {
     message: "Invalid token",
     isShowStackTrace: false,
   },
-  SERVER_VALIDATION_ERROR: {
-    id: 4,
-    httpCode: 666,
-    message: "Validation Failed",
-    isShowStackTrace: false,
-  },
 };
 
 module.exports = ErrorType;

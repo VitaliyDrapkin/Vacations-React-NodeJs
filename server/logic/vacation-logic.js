@@ -1,14 +1,16 @@
 const vacationDao = require("../dao/vacation-dao");
 const encryption = require("../helper/encryption");
 const photoLogic = require("./photo-Logic");
+const keys = require("../keys");
 
-const DOMAIN = "http://localhost:3001/";
+const DOMAIN = keys.SERVER_URL + "/";
 
 async function getAllVacations(token) {
-  //decrypt token
+  // decrypt token
   const user = encryption.decryptToken(token).data;
   const userId = user.userId;
   const vacations = await vacationDao.getAllVacations(userId);
+  // const vacations = await vacationDao.getAllVacations();
   vacations.map((vacation) => {
     if (vacation.imgUrl) {
       vacation.imgUrl = DOMAIN + vacation.imgUrl;
